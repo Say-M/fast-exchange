@@ -1,0 +1,293 @@
+// currency
+.currency {
+  background-color: $background;
+}
+.currency-status {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+  li {
+    margin-bottom: 0.5rem;
+    & > span {
+      width: calc(100% / 5);
+      padding: 0.75rem 1rem;
+      display: inline-block;
+    }
+  }
+  .currency-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .currency-body {
+    a {
+      background-color: $white;
+      border-radius: 0.5rem;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $font_color;
+      text-decoration: none;
+      & > span {
+        width: calc(100% / 5);
+        padding: 0.75rem 1rem;
+        display: inline-block;
+        img {
+          margin-right: 0.25rem;
+          width: 2rem;
+          border-radius: 50%;
+        }
+        .status {
+          font-size: 90%;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+          display: inline-block;
+          &.success {
+            border: 1px solid lightgreen;
+            color: lightgreen;
+          }
+          &.danger {
+            border: 1px solid #ff7a7a;
+            color: #ff7a7a;
+          }
+        }
+      }
+      &:hover {
+        box-shadow: 0 2px 6px rgba($color: $black, $alpha: 0.15);
+      }
+    }
+  }
+}
+.token-listing {
+  margin-bottom: 1rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+  min-height: calc(100% - 1rem);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    margin: 0 auto;
+    text-decoration: none;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    border: 2px dashed darken($color: $background, $amount: 10);
+    border-radius: 50%;
+    color: $black;
+    font-size: 2rem;
+  }
+  h3 {
+    margin: 2rem 0;
+  }
+}
+.exchange-item {
+  margin-bottom: 1rem;
+  position: relative;
+  .exchange-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: calc(50% - 1px);
+      background-color: $white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      & > p {
+        margin-bottom: 0;
+        padding-top: 1rem;
+      }
+      .money {
+        border: none;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-radius: 0.25rem;
+        border: 2px solid transparent;
+        outline: none;
+        transition: 0.2s;
+        margin-bottom: 0;
+        &:focus {
+          border: 2px solid $theme_color;
+          padding: 0.5rem;
+        }
+      }
+      &:first-child {
+        margin-right: 1px;
+      }
+      &:last-child {
+        margin-left: 1px;
+      }
+      .exchange-header {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+        img {
+          width: 2.5rem;
+          margin-right: 1rem;
+        }
+        span {
+          margin-bottom: 0.5rem;
+          &:last-of-type {
+            cursor: pointer;
+            font-size: 1.25rem;
+            i {
+              float: right;
+            }
+          }
+        }
+        .search-box {
+          position: relative;
+          .search-box-wrapper {
+            overflow: hidden;
+            transition: 0.2s;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 6px rgba($color: $black, $alpha: 0.15);
+            z-index: 11;
+            background-color: $white;
+            max-height: 200px;
+            overflow: auto;
+            border-radius: 0.25rem;
+            /* width */
+            &::-webkit-scrollbar {
+              width: 2px;
+            }
+            /* Track */
+            &::-webkit-scrollbar-track {
+              background: $white;
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+              background: $dark;
+            }
+            input {
+              position: sticky;
+              top: 0;
+              box-shadow: none;
+            }
+            ul {
+              list-style: none;
+              padding-left: 0;
+              margin-bottom: 0;
+              li {
+                padding: 0.5rem 0.75rem;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .exchange-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: $theme_color;
+    text-align: center;
+    line-height: 2.5rem;
+    z-index: 1;
+  }
+  .divider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2rem);
+    height: 2px;
+    background-color: $background;
+  }
+}
+.mission-item {
+  margin-bottom: 1rem;
+  position: relative;
+  &:hover {
+    &::before {
+      transform: rotate(335deg) scale(0.9);
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    border-radius: 5rem;
+    transform: rotate(335deg);
+    transition: 0.2s;
+    background-color: transparentize($color: $theme_color, $amount: 0.9);
+  }
+  h5 {
+    margin-bottom: 1rem;
+  }
+}
+.staking {
+  background-color: $background;
+  & > div {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+.staking-item {
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  background-color: $white;
+  margin-bottom: 2.5rem;
+  position: relative;
+  img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    animation: pulse 1s infinite ease-in-out;
+  }
+  h3 {
+    border-bottom: 1px solid transparentize($color: $dark, $amount: 0.75);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 0 -0.25rem 1rem -0.25rem;
+    li {
+      border-radius: 0.5rem;
+      background-color: $background;
+      cursor: pointer;
+      text-align: center;
+      margin: 0.5rem 0.25rem;
+      font-size: 85%;
+      padding: 0.5rem;
+      width: 100%;
+      &.active {
+        background-color: transparentize($color: $theme_color, $amount: 0.75);
+      }
+    }
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

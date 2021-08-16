@@ -1,0 +1,61 @@
+header {
+  background-color: $dark;
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        margin-right: 1rem;
+        font-size: 1.75rem;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        @media screen and (max-width: 767.98px) {
+          display: none;
+        }
+        li {
+          a,
+          span {
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: $white;
+            margin-left: 1rem;
+            padding: 0.5rem 0;
+            text-transform: capitalize;
+            i {
+              margin-left: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .account-btn {
+        .btn {
+          margin-right: 0.5rem;
+          &:first-child {
+            color: $white;
+          }
+        }
+      }
+      .essential {
+        a {
+          color: $white;
+          text-decoration: none;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

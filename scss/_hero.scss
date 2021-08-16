@@ -1,0 +1,20 @@
+.hero {
+  background-image: url('../images/pexels-alesia-kozik-6770775.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  min-height: 600px;
+  height: calc(100vh - 4.1875rem);
+  display: flex;
+  align-items: center;
+  .hero-wrapper {
+    p {
+      margin: 2.5rem 0;
+    }
+    .buttons {
+      .btn {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

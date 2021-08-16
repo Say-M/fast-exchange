@@ -1,0 +1,59 @@
+footer {
+  background-color: $dark;
+  padding-top: 4rem;
+  .footer-item {
+    margin-bottom: 1rem;
+    color: $white;
+    h5 {
+      color: $white;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      li {
+        a {
+          display: inline-block;
+          color: darken($color: $background, $amount: 10);
+          margin-bottom: 0.5rem;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 90%;
+          &:hover {
+            color: $background;
+          }
+        }
+      }
+    }
+  }
+  .socials {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    li {
+      a {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        display: inline-block;
+        color: darken($color: $background, $amount: 10);
+        text-decoration: none;
+        margin-bottom: 1rem;
+        i {
+          margin-right: 0.25rem;
+        }
+        &:hover {
+          color: $background;
+        }
+      }
+    }
+  }
+  p {
+    color: darken($color: $background, $amount: 10);
+    margin-bottom: 0;
+    padding: 2rem 0;
+    border-top: 1px solid darken($color: $background, $amount: 40);
+  }
+}
